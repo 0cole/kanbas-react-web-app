@@ -39,23 +39,27 @@
 				<td>
 					<h2>Cole Harvey</h2>
 					<table>
-						<tr>
+						<tr valign="baseline">
 							<td>
 								<form id="name-input">
 									<label for="name-input">Name:*</label>
 									<input id="name-input" />
 								</form>
+								<br />
+								<form id="title-input">
+									<label for="title-input">Title:</label>
+									<input id="title-input" />
+								</form>
 							</td>
 							<td>
 								<form id="pronoun-input">
 									<label for="pronoun-input">Pronouns:</label>
-									<input id="pronoun-input" />
-								</form>
-							</td>
-							<td>
-								<form id="title-input">
-									<label for="title-input">Title:</label>
-									<input id="title-input" />
+									<select id="pronoun-input">
+										<option selected value="NONE">None</option>
+										<option value="HE/HIM">He/Him</option>
+										<option value="SHE/HER">She/Her</option>
+										<option value="THEY/THEM">They/Them</option>
+									</select>
 								</form>
 							</td>
 						</tr>
@@ -70,40 +74,47 @@
 						<textarea cols="50" rows="5">Hi.</textarea>
 					</form>
 					<h3>Links</h3>
-					<a href="https://youtube.com">YouTube (Links to an external site)</a>
+					<a href="https://youtube.com">YouTube <img src="embed.png" alt="embed-icon" width="10" height="10"> (Links to an external site)</a>
 
 					<table>
 						<thead>
 							<tr>
 								<th>Title</th>
+                                <th></th>
 								<th>URL</th>
 							</tr>
 						</thead>
-                        <tbody>
-                            <tr>
+						<tbody>
+							<tr>
+								<th>
+									<form id="title-input">
+										<label for="title-input"></label>
+										<input id="title-input" placeholder="YouTube" />
+									</form>
+								</th>
                                 <th>
-                                    <form id="title-input">
-                                        <label for="title-input"></label>
-                                        <input id="title-input" placeholder="YouTube"/>
-                                    </form>
+                                    <img src="right-arrow.png" alt="right-arrow-icon" width="20" height="8">
                                 </th>
-                                <th>
-                                    <form id="link-input">
-                                        <label for="link-input"></label>
-                                        <input id="link-input" placeholder="https://youtube.com"/>
-                                    </form>
-                                </th>
-                                <th>
-                                    <a href="#">Remove</a>
-                                </th>
-                            </tr>
-                        </tbody>
+								<th>
+									<form id="link-input">
+										<label for="link-input"></label>
+										<input id="link-input" placeholder="https://youtube.com" />
+									</form>
+								</th>
+								<th>
+									<a href="#">Remove</a>
+								</th>
+							</tr>
+						</tbody>
 					</table>
-                    <button>Add another link</button>
-                    <button>Cancel</button>
-                    <button>Save Profile</button>
-                    <button>Edit Profile</button>
-                    <button>Cancel Editiing</button>
+
+					<button>Add another link</button>
+					<br />
+					<button>Cancel</button>
+					<button>Save Profile</button>
+					<br />
+					<button>Edit Profile</button>
+					<button>Cancel Editiing</button>
 				</td>
 			</tr>
 		</table>
