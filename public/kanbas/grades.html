@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<table width="100%">
+			<tr>
+				<td>
+					<ul>
+						<li><a href="profile/index.html"> Account </a></li> <!-- redirects here for now -->
+						<li><a href="#"> Dashboard </a></li>
+						<li><a href="#"> Courses </a></li>
+						<li><a href="#"> Calendar </a></li>
+						<li><a href="#"> Inbox </a></li>
+						<li><a href="#"> History </a></li>
+						<li><a href="#"> Studio </a></li>
+						<li><a href="#"> Commons </a></li>
+						<li><a href="#"> Help </a></li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li><a href="home.html"> Home </a></li>
+						<li><a href="#"> Modules </a></li>
+						<li><a href="#"> Piazza </a></li>
+						<li><a href="#"> Zoom Meetings </a></li>
+						<li><a href="assignments/index.html"> Assignments </a></li>
+						<li><a href="#"> Quizzes </a></li>
+						<li><a href="grades.html"> Grades </a></li>
+						<li><a href="#"> People </a></li>
+						<li><a href="#"> Panopto Video </a></li>
+						<li><a href="#"> Discussions </a></li>
+						<li><a href="#"> Announcements </a></li>
+						<li><a href="#"> Pages </a></li>
+						<li><a href="#"> Files </a></li>
+						<li><a href="#"> Rubrics </a></li>
+						<li><a href="#"> Outcomes </a></li>
+						<li><a href="#"> Collaborations </a></li>
+						<li><a href="#"> Syllabus </a></li>
+						<li><a href="#"> Settings </a></li>
+					</ul>
+				</td>
+				<td>
+					<select id="select-one-gradebook">
+						<option selected value="GRADEBOOK">Gradebook</option>
+					</select>
+					<button>Import</button>
+					<select id="select-one-export">
+						<option selected value="EXPORT">Export</option>
+					</select>
+					<button>Configure</button>
+
+					<h2>Student Names</h2>
+					<form id="textarea">
+						<textarea
+							cols="20"
+							rows="1"
+							placeholder="Search Students"
+						></textarea>
+					</form>
+
+					<h2>Assignment Names</h2>
+					<form id="textarea">
+						<textarea
+							cols="20"
+							rows="1"
+							placeholder="Search Assignments"
+						></textarea>
+					</form>
+
+					<br />
+					<button>Apply Filters</button>
+					<br />
+
+					<table border="1" width="100%">
+						<thead>
+							<tr>
+								<th>Student Name</th>
+								<th>
+									A1 SETUP <br />
+									Out of 100
+								</th>
+								<th>
+									A2 HTML <br />
+									Out of 100
+								</th>
+								<th>
+									A3 CSS <br />
+									Out of 100
+								</th>
+								<th>
+									A4 BOOTSTRAP <br />
+									Out of 100
+								</th>
+								<th>
+									A5 JAVASCRIPT <br />
+									Out of 100
+								</th>
+								<th>
+									A6 REACT <br />
+									Out of 100
+								</th>
+								<th>
+									A7 REDUX <br />
+									Out of 100
+								</th>
+								<th>
+									A8 NODE <br />
+									Out of 100
+								</th>
+								<th>
+									A9 MONGO <br />
+									Out of 100
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Alice Wonderland</th>
+								<th>98</th>
+								<th>89</th>
+								<th>87</th>
+								<th>90</th>
+								<th>89</th>
+								<th>94</th>
+								<th>88</th>
+								<th>87</th>
+								<th>100</th>
+							</tr>
+							<tr>
+								<th>Princess Leia</th>
+								<th>98</th>
+								<th>80</th>
+								<th>87</th>
+								<th>86</th>
+								<th>100</th>
+								<th>94</th>
+								<th>85</th>
+								<th>84</th>
+								<th>92</th>
+							</tr>
+							<tr>
+								<th>Luke Skywalker</th>
+								<th>99</th>
+								<th>88</th>
+								<th>97</th>
+								<th>82</th>
+								<th>96</th>
+								<th>93</th>
+								<th>95</th>
+								<th>100</th>
+								<th>93</th>
+							</tr>
+                            <tr>
+								<th>Han Solo</th>
+								<th>83</th>
+								<th>99</th>
+								<th>94</th>
+								<th>98</th>
+								<th>86</th>
+								<th>85</th>
+								<th>86</th>
+								<th>80</th>
+								<th>84</th>
+							</tr>
+                            <tr>
+								<th>Lando Calresian</th>
+								<th>83</th>
+								<th>92</th>
+								<th>80</th>
+								<th>80</th>
+								<th>92</th>
+								<th>92</th>
+								<th>94</th>
+								<th>87</th>
+								<th>95</th>
+							</tr>
+                            <tr>
+								<th>Boba Fet</th>
+								<th>85</th>
+								<th>89</th>
+								<th>94</th>
+								<th>83</th>
+								<th>83</th>
+								<th>84</th>
+								<th>91</th>
+								<th>87</th>
+								<th>96</th>
+							</tr>
+                            <tr>
+								<th>Luke Skywalker</th>
+								<th>99</th>
+								<th>88</th>
+								<th>97</th>
+								<th>82</th>
+								<th>96</th>
+								<th>93</th>
+								<th>95</th>
+								<th>100</th>
+								<th>93</th>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
