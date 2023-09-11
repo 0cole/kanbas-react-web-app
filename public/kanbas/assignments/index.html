@@ -1,60 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <table width = "100%">
-        <tr valign="baseline"> <!-- delete valign once i use css -->
-            <td>
-                <ul>
-                    <li><a href="../profile/index.html"> Account </a></li> <!-- redirects here for now -->
-                    <li><a href="#"> Dashboard </a></li>
-                    <li><a href="../home.html"> Courses </a></li>
-                    <li><a href="#"> Calendar </a></li>
-                    <li><a href="#"> Inbox </a></li>
-                    <li><a href="#"> History </a></li>
-                    <li><a href="#"> Studio </a></li>
-                    <li><a href="#"> Commons </a></li>
-                    <li><a href="#"> Help </a></li>
-                </ul>
-            </td>
-            <td>
-                <ul>
-                    <li><a href="../home.html"> Home </a></li>
-                    <li><a href="#"> Modules </a></li>
-                    <li><a href="#"> Piazza </a></li>
-                    <li><a href="#"> Zoom Meetings </a></li>
-                    <li><a href="#"> Assignments </a></li>
-                    <li><a href="#"> Quizzes </a></li>
-                    <li><a href="../grades.html"> Grades </a></li>
-                    <li><a href="#"> People </a></li>
-                    <li><a href="#"> Panopto Video </a></li>
-                    <li><a href="#"> Discussions </a></li>
-                    <li><a href="#"> Announcements </a></li>
-                    <li><a href="#"> Pages </a></li>
-                    <li><a href="#"> Files </a></li>
-                    <li><a href="#"> Rubrics </a></li>
-                    <li><a href="#"> Outcomes </a></li>
-                    <li><a href="#"> Collaborations </a></li>
-                    <li><a href="#"> Syllabus </a></li>
-                    <li><a href="#"> Settings </a></li>
-                </ul>
-            </td>
-            <td>
-                <form id="textarea">
-                    <textarea
-                        cols="20"
-                        rows="1"
-                        placeholder="Search for Assignments"
-                    ></textarea>
-                </form>
-                <button>Group</button>
-                <button>Assignment</button>
-            </td>
-        </tr>
-    </table>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<table width="100%">
+			<tr valign="baseline">
+				<!-- delete valign once i use css -->
+				<td>
+					<ul>
+						<li><a href="../profile/index.html"> Account </a></li>
+						<!-- redirects here for now -->
+						<li><a href="#"> Dashboard </a></li>
+						<li><a href="../home.html"> Courses </a></li>
+						<li><a href="#"> Calendar </a></li>
+						<li><a href="#"> Inbox </a></li>
+						<li><a href="#"> History </a></li>
+						<li><a href="#"> Studio </a></li>
+						<li><a href="#"> Commons </a></li>
+						<li><a href="#"> Help </a></li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li><a href="../home.html"> Home </a></li>
+						<li><a href="#"> Modules </a></li>
+						<li><a href="#"> Piazza </a></li>
+						<li><a href="#"> Zoom Meetings </a></li>
+						<li><a href="#"> Assignments </a></li>
+						<li><a href="#"> Quizzes </a></li>
+						<li><a href="../grades.html"> Grades </a></li>
+						<li><a href="#"> People </a></li>
+						<li><a href="#"> Panopto Video </a></li>
+						<li><a href="#"> Discussions </a></li>
+						<li><a href="#"> Announcements </a></li>
+						<li><a href="#"> Pages </a></li>
+						<li><a href="#"> Files </a></li>
+						<li><a href="#"> Rubrics </a></li>
+						<li><a href="#"> Outcomes </a></li>
+						<li><a href="#"> Collaborations </a></li>
+						<li><a href="#"> Syllabus </a></li>
+						<li><a href="#"> Settings </a></li>
+					</ul>
+				</td>
+				<td>
+					<table>
+						<tr>
+							<th>
+								<form id="assignment-search-input">
+									<label for="assignment-search-input"></label>
+									<input
+										id="assignment-search-input"
+										placeholder="Search for Assignments"
+									/>
+								</form>
+							</th>
+							<th>
+								<button>Group</button>
+							</th>
+							<th>
+								<button>Assignment</button>
+							</th>
+							<th>
+								<form id="edit-assignment-dates-input">
+									<label for="edit-assignment-dates-input"></label>
+									<select id="edit-assignment-dates-input">
+										<option selected value="EDIT-ASSIGNMENT-DATES">
+											Edit Assignment Dates
+										</option>
+									</select>
+								</form>
+							</th>
+						</tr>
+					</table>
+					<hr />
+					<table>
+						<tr>
+							<th>
+								<h3>ASSIGNMENTS 40% of Total</h3>
+							</th>
+							<th>
+								<form id="text-options-input">
+									<label for="text-options-input"></label>
+									<select id="text-options-input">
+										<option selected value="EDIT-TEXT">Edit</option>
+										<option value="SPEED-GRADER">Speed Grader</option>
+										<option value="DUPLICATE">Duplicate</option>
+										<option value="DELETE">Delete</option>
+										<option value="MOVE-TO">Move To...</option>
+										<option value="SEND-TO">Send To...</option>
+										<option value="COPY-TO">Copy To...</option>
+										<option value="SHARE-TO-COMMONS">Share to Commons</option>
+									</select>
+								</form>
+							</th>
+						</tr>
+					</table>
+					<ul>
+						<li>
+							<a href="#"
+								>A1 - ENV + HTML <br />
+								Multiple Modules</a
+							>
+							| Not available yet
+						</li>
+						<li>
+							<a href="#"
+								>A2 - CSS + BOOTSTRAP <br />
+								Multiple Modules</a
+							>
+							| Not available yet
+						</li>
+						<li>
+							<a href="#"
+								>A3 - JS + REACT <br />
+								Multiple Modules</a
+							>
+							| Not available yet
+						</li>
+						<li>
+							<a href="#"
+								>A4 - STATE + REDUX <br />
+								Multiple Modules</a
+							>
+							| Not available yet
+						</li>
+						<li>
+							<a href="#"
+								>A5 - NODE + SESSION <br />
+								Multiple Modules</a
+							>
+							| Not available yet
+						</li>
+						<li>
+							<a href="#"
+								>A6 - MONGO + MONGOOSE <br />
+								Multiple Modules</a
+							>
+							| Not available yet
+						</li>
+					</ul>
+					<table>
+						<tr>
+							<th>
+								<h3>QUIZZES 10% of Total</h3>
+							</th>
+							<th>
+								<form id="text-options-input">
+									<label for="text-options-input"></label>
+									<select id="text-options-input">
+										<option selected value="EDIT-TEXT">Edit</option>
+										<option value="SPEED-GRADER">Speed Grader</option>
+										<option value="DUPLICATE">Duplicate</option>
+										<option value="DELETE">Delete</option>
+										<option value="MOVE-TO">Move To...</option>
+										<option value="SEND-TO">Send To...</option>
+										<option value="COPY-TO">Copy To...</option>
+										<option value="SHARE-TO-COMMONS">Share to Commons</option>
+									</select>
+								</form>
+							</th>
+						</tr>
+					</table>
+					<ul>
+						<li>
+							<a href="#"
+								>Q1 - HTML <br />
+								Multiple Modules</a
+							>
+							| Not available yet
+						</li>
+						<li>
+							<a href="#"
+								>Q2 - CSS <br />
+								Multiple Modules</a
+							>
+							| Not available yet
+						</li>
+						<li>
+							<a href="#"
+								>Q3 - JS + ES6 <br />
+								Multiple Modules</a
+							>
+							| Not available yet
+						</li>
+						<li>
+							<a href="#"
+								>Q4 - NODE <br />
+								Multiple Modules</a
+							>
+							| Not available yet
+						</li>
+						<li>
+							<a href="#"
+								>Q6 - MONGO <br />
+								Multiple Modules</a
+							>
+							| Not available yet
+						</li>
+					</ul>
+					<table>
+						<tr>
+							<th>
+								<h3>EXAMS 20% of Total</h3>
+							</th>
+							<th>
+								<form id="text-options-input">
+									<label for="text-options-input"></label>
+									<select id="text-options-input">
+										<option selected value="EDIT-TEXT">Edit</option>
+										<option value="SPEED-GRADER">Speed Grader</option>
+										<option value="DUPLICATE">Duplicate</option>
+										<option value="DELETE">Delete</option>
+										<option value="MOVE-TO">Move To...</option>
+										<option value="SEND-TO">Send To...</option>
+										<option value="COPY-TO">Copy To...</option>
+										<option value="SHARE-TO-COMMONS">Share to Commons</option>
+									</select>
+								</form>
+							</th>
+						</tr>
+					</table>
+					<ul>
+						<li>
+							<a href="#"
+								>Midterm <br />
+								Multiple Modules</a
+							>
+							| Not available yet
+						</li>
+						<li>
+							<a href="#"
+								>Final <br />
+								Multiple Modules</a
+							>
+							| Not available yet
+						</li>
+					</ul>
+					<table>
+						<tr>
+							<th>
+								<h3>PROJECT 30% of Total</h3>
+							</th>
+							<th>
+								<form id="text-options-input">
+									<label for="text-options-input"></label>
+									<select id="text-options-input">
+										<option selected value="EDIT-TEXT">Edit</option>
+										<option value="SPEED-GRADER">Speed Grader</option>
+										<option value="DUPLICATE">Duplicate</option>
+										<option value="DELETE">Delete</option>
+										<option value="MOVE-TO">Move To...</option>
+										<option value="SEND-TO">Send To...</option>
+										<option value="COPY-TO">Copy To...</option>
+										<option value="SHARE-TO-COMMONS">Share to Commons</option>
+									</select>
+								</form>
+							</th>
+						</tr>
+					</table>
+					<ul>
+						<li>
+							<a href="#"
+								>Project <br />
+								Multiple Modules</a
+							>
+							| Not available yet
+						</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</body>
 </html>
