@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<table width="100%">
+			<tr valign="baseline">
+				<!-- delete valign once i use css -->
+				<td width="15%">
+					<ul>
+						<li><a href="../../Account/index.html"> Account </a></li>
+						<!-- redirects here for now -->
+						<li><a href="#"> Dashboard </a></li>
+						<li><a href="../Assignments/index.html"> Courses </a></li>
+						<li><a href="#"> Calendar </a></li>
+						<li><a href="#"> Inbox </a></li>
+						<li><a href="#"> History </a></li>
+						<li><a href="#"> Studio </a></li>
+						<li><a href="#"> Commons </a></li>
+						<li><a href="#"> Help </a></li>
+					</ul>
+				</td>
+				<td width="15%">
+					<ul>
+						<li><a href="../home.html"> Home </a></li>
+						<li><a href="#"> Modules </a></li>
+						<li><a href="#"> Piazza </a></li>
+						<li><a href="#"> Zoom Meetings </a></li>
+						<li><a href="#"> Assignments </a></li>
+						<li><a href="#"> Quizzes </a></li>
+						<li><a href="../Grades/grades.html"> Grades </a></li>
+						<li><a href="#"> People </a></li>
+						<li><a href="#"> Panopto Video </a></li>
+						<li><a href="#"> Discussions </a></li>
+						<li><a href="#"> Announcements </a></li>
+						<li><a href="#"> Pages </a></li>
+						<li><a href="#"> Files </a></li>
+						<li><a href="#"> Rubrics </a></li>
+						<li><a href="#"> Outcomes </a></li>
+						<li><a href="#"> Collaborations </a></li>
+						<li><a href="#"> Syllabus </a></li>
+						<li><a href="#"> Settings </a></li>
+					</ul>
+				</td>
+				<td>
+					<select id="grader">
+						<option value="SPEEDGRADER">SpeedGrader</option>
+					</select>
+					<hr />
+					<h2>Assignment Name</h2>
+					<form id="assignment-edit">
+						<label for="assignment-edit-name"></label>
+						<input id="assignment-edit-name" value="A1 - ENV + HTML" /><br />
+						<label for="assignment-edit-description"></label><br />
+						<textarea cols="30" rows="2">
+This is the assignment description</textarea
+						><br />
+						<br />
+
+						<label for="assignment-edit-points">Points</label><br />
+						<input
+							id="assignment-edit-points"
+							type="number"
+							value="100"
+							max="100"
+							min="0"
+						/><br /><br />
+
+						<label for="assignment-edit-group">Assignment Group</label><br />
+						<select id="assignment-edit-group">
+							<option value="ASSIGNMENTS">ASSIGNMENTS</option></select
+						><br />
+						<br />
+
+						<label for="assignment-edit-display">Display Grade As</label><br />
+						<select id="assignment-edit-display">
+							<option value="PERCENTAGE">Percentage</option></select
+						><br />
+						<br />
+
+						<label for="assignment-edit-submission-type">Submission Type</label
+						><br />
+						<select id="assignment-edit-submission-type">
+							<option value="ONLINE">ONLINE</option></select
+						><br />
+						<br />
+
+						<label for="assignment-edit-online-entry-options"
+							>Online Entry Options</label
+						><br />
+						<input value="TEXT-ENTRY" type="checkbox" />
+						<label for="TEXT-ENTRY">Text Entry</label> <br />
+						<input value="WEBSITE-URL" type="checkbox" />
+						<label for="WEBSITE-URL">Website URL</label> <br />
+						<input value="MEDIA-RECORDING" type="checkbox" />
+						<label for="MEDIA-RECORDING">Media Recording</label> <br />
+						<input value="STUDENT-ANNOTATION" type="checkbox" />
+						<label for="STUDENT-ANNOTATION">Student Annotation</label> <br />
+						<input value="FILE-UPLOADS" type="checkbox" />
+						<label for="FILE-UPLOADS">File Uploads</label> <br />
+						<br /><br />
+
+						<label for="assignment-edit-submission-attempts"
+							>Submission Attempts</label
+						><br />
+						<select id="assignment-edit-submission-attempts">
+							<option value="UNLIMITED">Unlimited</option></select
+						><br />
+						<br />
+
+						<label for="assignment-edit-plagairism-review"
+							>Plagiarism Review</label
+						><br />
+						<select id="assignment-edit-plagairism-review">
+							<option value="NONE">None</option></select
+						><br />
+						<br />
+
+						<label for="assignment-edit-group-assignment"
+							>Group Assignment</label
+						><br />
+						<input value="GROUP-ASSIGNMENT" type="checkbox" />
+						<label for="chkbox-drama">This is a group assignment</label>
+						<br />
+						<br />
+
+						<label for="assignment-edit-peer-review">Peer Reviews</label><br />
+						<input value="PEER-REVIEWS" type="checkbox" />
+						<label for="chkbox-drama">Require Peer Reviews</label>
+						<br />
+						<br />
+
+						<label for="assignment-assign-to">Assign<br />Assign to</label
+						><br />
+						<input id="assignment-edit-points" value="Everyone" /><br />
+						<br />
+
+                        <label for="assignment-edit-due-date">Due Date</label><br />
+                        <input id="assignment-edit-due-date" type="date" value="2021-01-01"/><br />
+                        <br />
+
+                        <label for="assignment-edit-available">Available From</label><br />
+                        <input id="assignment-edit-available" type="date" value="2021-01-01"/><br />
+                        <br />
+
+                        <label for="assignment-edit-until">Until</label><br />
+                        <input id="assignment-edit-until" type="date" value="2021-01-01"/><br />
+                        <br />
+
+                        <button>Cancel</button>4
+                        <button>Save</button>
+					</form>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
