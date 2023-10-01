@@ -2,13 +2,7 @@
     margin: 1pc;
 }
 
-.wd-course-grades-table-primary {
-    background-color: rgb(230, 230, 230);
-    font-size: small;
-    font-weight: 300;
-}
-
-.wd-course-grades-table-alternate {
+.wd-course-grades-table {
     font-size: small;
     font-weight: 300;
 }
