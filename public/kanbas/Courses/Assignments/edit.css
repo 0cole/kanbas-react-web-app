@@ -1,0 +1,38 @@
+.wd-edit-assignment-item {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.wd-edit-assignment-points {
+}
+
+.wd-edit-assignment-groups {
+}
+
+.wd-edit-assignment-option-text {
+    flex: none;
+    width: 200px;
+    text-align: right;
+    margin-right: 1pc;
+}
+
+.wd-edit-assignment-details-text {
+    max-width: 400px;
+}
+
+.wd-edit-assignment-option-container {
+    border:solid;
+    border-radius: 6px;
+    border-color: rgb(200, 200, 200);
+    max-width: 300px;
+    padding-left: 1pc;
+    padding-top: 1pc;
+    padding-right: 3pc;
+}
+
+.wd-edit-assignment-online-entry-checkbox {
+    display: block;
+    margin-bottom: 1pc;
+    text-align: left;
+}

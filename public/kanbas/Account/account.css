@@ -1,0 +1,76 @@
+.wd-navbar-account {
+	width: 190px;
+	float: left;
+	padding-left: 25px;
+}
+
+.wd-navbar-account-list {
+	justify-content: left;
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.wd-navbar-account-item {
+	padding-bottom: 15px;
+}
+
+.wd-navbar-account-link {
+	text-decoration: none;
+	color: rgb(208, 15, 15);
+}
+
+.wd-navbar-account-link:hover {
+	color: rgb(208, 15, 15);
+}
+
+.wd-account-main-content {
+	overflow: hidden;
+	float: left;
+	padding-left: 3pc;
+}
+
+.profile-picture {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin-bottom: 1pc;
+}
+
+.wd-account-main-content-name {
+	padding-bottom: 1pc;
+}
+
+.wd-account-main-content-profile-picture {
+	font-size: 150px;
+	color: gray;
+}
+
+.wd-account-main-content-header {
+	padding: 12px 0 0 0;
+	line-height: 1.25;
+}
+
+.wd-account-edit-profile-label {
+	font-weight: 500;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.wd-account-edit-profile-header {
+	font-weight: 400;
+	padding-top: 1pc;
+	padding-bottom: 3px;
+}
+
+.wd-account-edit-link-header {
+	text-align: center;
+}
+
+.wd-account-edit-new-link-button {
+	margin-top: 1pc;
+	margin-left: 1pc;
+}
+
+.wd-account-edit-finish-button {
+	margin-left: 1pc;
+}

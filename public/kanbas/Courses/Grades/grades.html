@@ -4,202 +4,261 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link href="../../../vendors/bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="../../../vendors/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet" />
+		<link href="../../styles.css" rel="stylesheet" />
+		<link href="../index.css" rel="stylesheet" />
+		<link href="index.css" rel="stylesheet" />
 	</head>
 	<body>
-		<table width="100%">
-			<tr valign="baseline"> <!-- delete valign once i use css -->
-				<td width="15%">
-					<ul>
-						<li><a href="../../Account/index.html"> Account </a></li> <!-- redirects here for now -->
-						<li><a href="#"> Dashboard </a></li>
-						<li><a href="../home.html"> Courses </a></li>
-						<li><a href="#"> Calendar </a></li>
-						<li><a href="#"> Inbox </a></li>
-						<li><a href="#"> History </a></li>
-						<li><a href="#"> Studio </a></li>
-						<li><a href="#"> Commons </a></li>
-						<li><a href="#"> Help </a></li>
+		<div class="row">
+			<div class="col-3" style="width: 85px">
+				<div class="wd-navbar d-none d-sm-block">
+					<ul class="wd-navbar-list">
+						<li class="nav-item">
+							<a class="nav-link wd-navbar-link" href="../Dashboard/index.html">
+								<img class="wd-logo" src="../../northeastern-logo.png" alt="Northeastern Logo" />
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link wd-navbar-link" href="../../Account/profile/index.html">
+								<div>
+									<i class="fas fa-user-circle wd-navbar-icon" style="color: gray"> </i>
+									<div class="wd-navbar-link-text">Account</div>
+								</div>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link wd-navbar-link" href="../../Dashboard/index.html">
+								<div>
+									<i class="fas fa-tachometer-alt wd-navbar-icon"></i>
+									<div class="wd-navbar-link-text">Dashboard</div>
+								</div>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link wd-navbar-link-active" href="../home.html">
+								<div>
+									<i class="fas fa-book m-icon wd-navbar-icon"></i>
+									<div class="wd-navbar-link-text">Courses</div>
+								</div>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link wd-navbar-link" href="#">
+								<div>
+									<i class="far fa-calendar wd-navbar-icon"></i>
+									<div class="wd-navbar-link-text">Calendar</div>
+								</div>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link wd-navbar-link" href="#">
+								<div>
+									<i class="fas fa-inbox wd-navbar-icon"></i>
+									<div class="wd-navbar-link-text">Inbox</div>
+								</div>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link wd-navbar-link" href="#">
+								<div>
+									<i class="far fa-clock wd-navbar-icon"></i>
+									<div class="wd-navbar-link-text">History</div>
+								</div>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link wd-navbar-link" href="#">
+								<div>
+									<i class="fas fa-network-wired wd-navbar-icon"></i>
+									<div class="wd-navbar-link-text">Studio</div>
+								</div>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link wd-navbar-link" href="#">
+								<div>
+									<i class="fas fa-comments wd-navbar-icon"></i>
+									<div>Commons</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="nav-link wd-navbar-link" href="#">
+								<div>
+									<i class="fas fa-question-circle wd-navbar-icon"></i>
+									<div>Help</div>
+								</div>
+							</a>
+						</li>
 					</ul>
-				</td>
-				<td width="15%">
-					<ul>
-						<li><a href="../home.html"> Home </a></li>
-						<li><a href="#"> Modules </a></li>
-						<li><a href="#"> Piazza </a></li>
-						<li><a href="#"> Zoom Meetings </a></li>
-						<li><a href="../Assignments/index.html"> Assignments </a></li>
-						<li><a href="#"> Quizzes </a></li>
-						<li><a href="grades.html"> Grades </a></li>
-						<li><a href="#"> People </a></li>
-						<li><a href="#"> Panopto Video </a></li>
-						<li><a href="#"> Discussions </a></li>
-						<li><a href="#"> Announcements </a></li>
-						<li><a href="#"> Pages </a></li>
-						<li><a href="#"> Files </a></li>
-						<li><a href="#"> Rubrics </a></li>
-						<li><a href="#"> Outcomes </a></li>
-						<li><a href="#"> Collaborations </a></li>
-						<li><a href="#"> Syllabus </a></li>
-						<li><a href="#"> Settings </a></li>
-					</ul>
-				</td>
-				<td>
-					<select id="select-one-gradebook">
-						<option selected value="GRADEBOOK">Gradebook</option>
-					</select>
-					<button>Import</button>
-					<select id="select-one-export">
-						<option selected value="EXPORT">Export</option>
-					</select>
-					<button>Configure</button>
-
-					<h2>Student Names</h2>
-					<form id="student-search">
-						<label for="student-search"></label>
-						<input id="student-search" placeholder="Search Students" />
-					</form>
-
-					<h2>Assignment Names</h2>
-					<form id="assignment-search">
-						<label for="assignment-search"></label>
-						<input id="assignment-search" placeholder="Search Assignments" />
-					</form>
-					<br />
-
-					<button>Apply Filters</button>
-					<br />
-
-					<table border="1" width="100%">
-						<thead>
-							<tr>
-								<th>Student Name</th>
-								<th>
-									A1 SETUP <br />
-									Out of 100
-								</th>
-								<th>
-									A2 HTML <br />
-									Out of 100
-								</th>
-								<th>
-									A3 CSS <br />
-									Out of 100
-								</th>
-								<th>
-									A4 BOOTSTRAP <br />
-									Out of 100
-								</th>
-								<th>
-									A5 JAVASCRIPT <br />
-									Out of 100
-								</th>
-								<th>
-									A6 REACT <br />
-									Out of 100
-								</th>
-								<th>
-									A7 REDUX <br />
-									Out of 100
-								</th>
-								<th>
-									A8 NODE <br />
-									Out of 100
-								</th>
-								<th>
-									A9 MONGO <br />
-									Out of 100
-								</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th>Alice Wonderland</th>
-								<th>98</th>
-								<th>89</th>
-								<th>87</th>
-								<th>90</th>
-								<th>89</th>
-								<th>94</th>
-								<th>88</th>
-								<th>87</th>
-								<th>100</th>
-							</tr>
-							<tr>
-								<th>Princess Leia</th>
-								<th>98</th>
-								<th>80</th>
-								<th>87</th>
-								<th>86</th>
-								<th>100</th>
-								<th>94</th>
-								<th>85</th>
-								<th>84</th>
-								<th>92</th>
-							</tr>
-							<tr>
-								<th>Luke Skywalker</th>
-								<th>99</th>
-								<th>88</th>
-								<th>97</th>
-								<th>82</th>
-								<th>96</th>
-								<th>93</th>
-								<th>95</th>
-								<th>100</th>
-								<th>93</th>
-							</tr>
-							<tr>
-								<th>Han Solo</th>
-								<th>83</th>
-								<th>99</th>
-								<th>94</th>
-								<th>98</th>
-								<th>86</th>
-								<th>85</th>
-								<th>86</th>
-								<th>80</th>
-								<th>84</th>
-							</tr>
-							<tr>
-								<th>Lando Calresian</th>
-								<th>83</th>
-								<th>92</th>
-								<th>80</th>
-								<th>80</th>
-								<th>92</th>
-								<th>92</th>
-								<th>94</th>
-								<th>87</th>
-								<th>95</th>
-							</tr>
-							<tr>
-								<th>Boba Fet</th>
-								<th>85</th>
-								<th>89</th>
-								<th>94</th>
-								<th>83</th>
-								<th>83</th>
-								<th>84</th>
-								<th>91</th>
-								<th>87</th>
-								<th>96</th>
-							</tr>
-							<tr>
-								<th>Luke Skywalker</th>
-								<th>99</th>
-								<th>88</th>
-								<th>97</th>
-								<th>82</th>
-								<th>96</th>
-								<th>93</th>
-								<th>95</th>
-								<th>100</th>
-								<th>93</th>
-							</tr>
-						</tbody>
-					</table>
-				</td>
-			</tr>
-		</table>
+				</div>
+			</div>
+			<div class="d-block d-sm-none">
+				<header>
+					<nav class="navbar navbar-expand-lg navbar-light bg-black wd-small-screen-header">
+						<a class="wd-navbar-icon" href="../mobile-navbar.html"
+							><img class="wd-logo" src="../northeastern-logo.png" alt="Northeastern Logo"
+						/></a>
+						<p class="wd-small-screen-header-page-description">CS4550</p>
+					</nav>
+				</header>
+			</div>
+			<div class="col">
+				<div class="d-none d-sm-block">
+					<div class="wd-course-header">
+						<nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item active">
+									<a class="wd-course-breadcrumb-link" href="#">CS4550</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">Grades</li>
+							</ol>
+						</nav>
+					</div>
+					<hr class="wd-topbar-header" style="margin-top: 0" />
+				</div>
+				<div class="row" style="margin: 0pc">
+					<div class="col wd-navbar-secondary d-none d-md-block">
+						<ul class="wd-navbar-secondary-list">
+							<li class="nav-item wd-navbar-secondary-item">
+								<a class="wd-navbar-secondary-link " href="../home.html"> Home </a>
+							</li>
+							<li class="nav-item wd-navbar-secondary-item">
+								<a class="wd-navbar-secondary-link" href="#"> Modules </a>
+							</li>
+							<li class="nav-item wd-navbar-secondary-item">
+								<a class="wd-navbar-secondary-link" href="#"> Piazza </a>
+							</li>
+							<li class="nav-item wd-navbar-secondary-item">
+								<a class="wd-navbar-secondary-link" href="#"> Zoom Meetings </a>
+							</li>
+							<li class="nav-item wd-navbar-secondary-item">
+								<a class="wd-navbar-secondary-link" href="../Assignments/index.html"> Assignments </a>
+							</li>
+							<li class="nav-item wd-navbar-secondary-item">
+								<a class="wd-navbar-secondary-link" href="#"> Quizzes </a>
+							</li>
+							<li class="nav-item wd-navbar-secondary-item">
+								<a class="wd-navbar-secondary-link active" href="../Grades/grades.html"> Grades </a>
+							</li>
+							<li class="nav-item wd-navbar-secondary-item">
+								<a class="wd-navbar-secondary-link" href="#"> Panopto Video </a>
+							</li>
+							<li class="nav-item wd-navbar-secondary-item">
+								<a class="wd-navbar-secondary-link" href="#"> Discussions </a>
+							</li>
+							<li class="nav-item wd-navbar-secondary-item">
+								<a class="wd-navbar-secondary-link" href="#"> Announcements </a>
+							</li>
+							<li class="nav-item wd-navbar-secondary-item">
+								<a class="wd-navbar-secondary-link" href="#"> Pages </a>
+							</li>
+							<li class="nav-item wd-navbar-secondary-item">
+								<a class="wd-navbar-secondary-link" href="#"> Files </a>
+							</li>
+							<li class="nav-item wd-navbar-secondary-item">
+								<a class="wd-navbar-secondary-link" href="#"> Rubrics </a>
+							</li>
+							<li class="nav-item wd-navbar-secondary-item">
+								<a class="wd-navbar-secondary-link" href="#"> Outcomes </a>
+							</li>
+							<li class="nav-item wd-navbar-secondary-item">
+								<a class="wd-navbar-secondary-link" href="#"> Collaborations </a>
+							</li>
+							<li class="nav-item wd-navbar-secondary-item">
+								<a class="wd-navbar-secondary-link" href="#"> Syllabus </a>
+							</li>
+							<li class="nav-item wd-navbar-secondary-item">
+								<a class="wd-navbar-secondary-link" href="#"> Progress Reports </a>
+							</li>
+							<li class="nav-item wd-navbar-secondary-item">
+								<a class="wd-navbar-secondary-link" href="#"> Settings </a>
+							</li>
+						</ul>
+					</div>
+					<div class="col wd-course-home-main-content">
+						<div class="row">
+							<div class="wd-course-home-main-content-top-row mb-3">
+								<button class="btn btn-primary wd-course-home-main-content-button">
+									<span class="wd-btn-text"><i class="fas fa-file-import"></i> Import</span>
+								</button>
+								<button class="btn btn-primary wd-course-home-main-content-button">
+									<span class="wd-btn-text"><i class="fas fa-file-export"></i> Export</span>
+								</button>
+								<button class="btn btn-primary wd-course-home-main-content-button">
+									<span class="wd-btn-text"><i class="fas fa-cogs"></i></span>
+								</button>
+							</div>
+						</div>
+						<div class="row">
+							<div class="d-flex justify-content-center">
+								<div>
+									<form class="wd-course-grades-search-box" id="assignment-name">
+										<label style="float: left" for="assignment-name">Student Names</label>
+										<input class="form-control" id="assignment-name" placeholder="Search Students" />
+									</form>
+								</div>
+								<div >
+									<form class="wd-course-grades-search-box" id="assignment-name">
+										<label style="float: left" for="assignment-name">Assignement Names</label>
+										<input class="form-control" id="assignment-name" placeholder="Search Assignments" />
+									</form>
+								</div>
+							</div>
+						</div>
+						<div>
+							<button class="btn btn-primary wd-course-home-main-content-button">
+								<span class="wd-btn-text"><i class="fas fa-filter"></i> Apply Filters</span>
+							</button>
+						</div>
+						<div class="mt-3">
+							<table class="table table-bordered">
+								<thead>
+									<tr class="wd-course-grades-table-primary">
+										<th>Student Name</th>
+										<th>A1 SETUP <br> Out of 100</th>
+										<th>A2 HTML <br> Out of 100</th>
+										<th>A3 CSS <br> Out of 100</th>
+										<th>A4 BOOTSTRAP <br> Out of 100</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="wd-course-grades-table-alternate">
+										<th>Student 1</th>
+										<td class="wd-course-grades-individual-cell" contenteditable="true">98</td>
+										<td class="wd-course-grades-individual-cell" contenteditable="true">89</td>
+										<td class="wd-course-grades-individual-cell" contenteditable="true">87</td>
+										<td class="wd-course-grades-individual-cell" contenteditable="true">90</td>
+									</tr>
+									<tr class="wd-course-grades-table-primary">
+										<th>Student 2</th>
+										<td class="wd-course-grades-individual-cell" contenteditable="true">98</td>
+										<td class="wd-course-grades-individual-cell" contenteditable="true">89</td>
+										<td class="wd-course-grades-individual-cell" contenteditable="true">87</td>
+										<td class="wd-course-grades-individual-cell" contenteditable="true">90</td>
+									</tr>
+									<tr class="wd-course-grades-table-alternate">
+										<th>Student 3</th>
+										<td class="wd-course-grades-individual-cell" contenteditable="true">98</td>
+										<td class="wd-course-grades-individual-cell" contenteditable="true">89</td>
+										<td class="wd-course-grades-individual-cell" contenteditable="true">87</td>
+										<td class="wd-course-grades-individual-cell" contenteditable="true">90</td>
+									</tr>
+									<tr class="wd-course-grades-table-primary">
+										<th>Student 4</th>
+										<td class="wd-course-grades-individual-cell" contenteditable="true">98</td>
+										<td class="wd-course-grades-individual-cell" contenteditable="true">89</td>
+										<td class="wd-course-grades-individual-cell" contenteditable="true">87</td>
+										<td class="wd-course-grades-individual-cell" contenteditable="true">90</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

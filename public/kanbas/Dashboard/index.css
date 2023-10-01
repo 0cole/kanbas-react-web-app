@@ -1,0 +1,58 @@
+.wd-dashboard-card-container .col {
+	width: 300px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.wd-dashboard-published-courses-text {
+	font-size: x-large;
+	font-weight: 400;
+}
+
+.wd-course-card {
+	width: 250px;
+	height: 300px;
+	margin-right: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+}
+
+.wd-course-card-image {
+	width: 250px;
+	max-height: 150px;
+	object-fit: cover;
+}
+
+.wd-course-card-text {
+	justify-content: space-between;
+}
+
+.wd-course-card-text .wd-course-name {
+	color: red;
+	font-size: large;
+	font-weight: 500;
+	margin-bottom: 5px;
+	text-decoration: none;
+}
+
+.wd-course-card-text .wd-course-section {
+	color: gray;
+	font-size: medium;
+	margin-bottom: 2px;
+	font-weight: 500;
+}
+
+.wd-course-card-text .wd-course-duration {
+	color: gray;
+	font-size: medium;
+	font-weight: 500;
+	margin-bottom: 2px;
+	text-decoration: none;
+}
+
+.wd-dashboard-card-container a {
+	text-decoration: none;
+	margin-top: 40px;
+}

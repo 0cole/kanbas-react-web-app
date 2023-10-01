@@ -1,0 +1,32 @@
+.wd-course-grades-search-box {
+    margin: 1pc;
+}
+
+.wd-course-grades-table-primary {
+    background-color: rgb(230, 230, 230);
+    font-size: small;
+    font-weight: 300;
+}
+
+.wd-course-grades-table-alternate {
+    font-size: small;
+    font-weight: 300;
+}
+
+.wd-course-grades-individual-cell {
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.wd-course-grades-individual-cell:focus {
+    outline: none;
+    border: 2px solid #007bff;
+}
+
+.wd-course-grades-individual-cell:after {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
