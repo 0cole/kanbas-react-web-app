@@ -56,3 +56,8 @@
 	text-decoration: none;
 	margin-top: 40px;
 }
+
+.wd-dashboard-item-icon {
+	text-decoration: none;
+	color: rgb(210, 210, 210);
+}
