@@ -1,0 +1,6 @@
+.wd-module {
+    display: flex !important;
+    align-items: center;
+	padding-left: 1pc;
+    justify-content: space-between;
+}

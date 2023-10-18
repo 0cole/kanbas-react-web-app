@@ -1,0 +1,30 @@
+.wd-edit-assignment-item {
+	display: flex;
+	margin-bottom: 2pc;
+}
+
+.wd-assignment-edit-publushed-text {
+	color: #00b32d;
+    margin-right: 5px;
+}
+
+.wd-edit-assignment-option-text {
+	flex: none;
+	width: 200px;
+	text-align: right;
+	margin-right: 1pc;
+}
+
+.wd-edit-assignment-option-container {
+	border: solid;
+	border-radius: 6px;
+	border-color: rgb(200, 200, 200);
+	max-width: 300px;
+	padding-left: 1pc;
+	padding-top: 1pc;
+	padding-right: 3pc;
+}
+
+.wd-assignment-dates {
+	float: left;
+}

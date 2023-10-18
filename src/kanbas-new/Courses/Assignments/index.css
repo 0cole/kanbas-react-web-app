@@ -1,0 +1,23 @@
+.wd-assignment-list-header {
+	justify-content: space-between;
+	align-items: center;
+}
+
+.wd-course-assignment-search {
+	height: 40px;
+	width: 300px;
+}
+
+.wd-course-header-buttons {
+	display: flex;
+	width: 100%;
+	justify-content: end;
+	height: fit-content;
+}
+
+.wd-course-header-btn {
+    margin-left: 5px;
+    height: fit-content;
+    width: fit-content;
+}
+

@@ -1,0 +1,20 @@
+.wd-mobile-header {
+    background-color: black;
+    height: fit-content;
+    width: 100%;
+}
+
+.wd-logo {
+    height: 70px;
+    width: 70px;
+}
+
+.wd-mobile-crumb {
+    color: white;
+    font-size: 30px;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}

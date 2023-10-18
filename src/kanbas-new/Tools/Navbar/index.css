@@ -1,0 +1,62 @@
+.wd-navbar { 
+	display: flex;
+	width: 85px;
+	min-height: 100%;
+	background-color: black;
+	float: left;
+	padding-left: 0;
+	padding-right: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	list-style-type: none;
+	border-radius: 0 !important;
+}
+
+.wd-navbar-item {
+	width: 85px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wd-navbar-link {
+	width: 85px;
+	color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-decoration: none;
+	display: grid;
+	justify-items: center;
+}
+
+.wd-navbar-text {
+	display: flex;
+	width: 85px;
+	justify-content: center;
+}
+
+.wd-navbar-item .active {
+	background-color: white;
+	color: rgb(208, 15, 15);
+	text-decoration: none;
+}
+
+.wd-navbar-icon {
+	color: rgb(208, 15, 15);
+	font-size: 28px;
+}
+
+.wd-navbar-icon-container {
+	margin: 0;
+	height: 30px;
+	width: 30px;
+}
+
+.wd-navbar-logo {
+	width: 70px;
+}
+
+.wd-navbar-link-text {
+	font-size: 15px;
+}

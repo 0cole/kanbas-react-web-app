@@ -1,0 +1,63 @@
+import db from "../Tools/Database";
+import { useParams, useLocation, Link } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+import CourseNavigation from "../Tools/SecondaryNavigation/CourseNavigation";
+import Home from "./Home";
+import Modules from "./Modules";
+import Assignments from "./Assignments";
+import AssignmentEditor from "./Assignments/Editor";
+import MobileCourseNav from "./MobileCourseNav";
+import Breadcrumbs from "../Tools/Courses/Breadcrumbs";
+import { IoEllipsisVertical } from "react-icons/io5";
+import "./index.css";
+
+function Courses() {
+	const { courseId } = useParams();
+	const course = db.courses.find((course) => course._id === courseId);
+	const id = course._id;
+	const page = useLocation().pathname.split("/").pop();
+	return (
+		<div className="wd-main-content">
+			<div className="d-none d-md-block">
+				<Breadcrumbs course={course} name={course.name} page={page} />
+			</div>
+			<div className="d-flex">
+				<div className="d-none d-md-block">
+					<CourseNavigation courseId={id} />
+				</div>
+				<div className="d-block d-md-none" style={{width: "10px"}}>
+					<Link to={`/Kanbas/Courses/${courseId}/MobileCourseNav`}>
+						<IoEllipsisVertical style={{ fontSize: "24px", color: "rgb(208, 15, 15)" }} />
+					</Link>
+				</div>
+
+				<div
+					className="col-10 float-right wd-page-content"
+					style={{
+						left: "300px",
+						top: "85px",
+					}}
+				>
+					<Routes>
+						<Route path="/" element={<Navigate to="Home" />} />
+						<Route path="Home" element={<Home />} />
+						<Route path="Modules" element={<Modules />} />
+						<Route path="Assignments" element={<Assignments />} />
+						<Route path="Assignments/:assignmentId" element={<AssignmentEditor />} />
+						<Route path="Grades" element={<h1>Grades</h1>} />
+						<Route path="MobileCourseNav" element={<MobileCourseNav courseId={id} />} />
+						<Route
+							path="/*"
+							element={
+								<h1 className="d-flex justify-content-center" style={{ marginTop: "8em" }}>
+									This page has not yet been configured.
+								</h1>
+							}
+						/>
+					</Routes>
+				</div>
+			</div>
+		</div>
+	);
+}
+export default Courses;

@@ -1,0 +1,55 @@
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: LatoWeb, "Lato Extended", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	overflow-x: hidden;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+.wd-main-content {
+	padding: 0;
+	margin: 8px;
+}
+
+.wd-header {
+	overflow-y: scroll;
+    margin: 25px;
+	height: 65px;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.wd-header-title {
+	font-size: 35px;
+    font-weight: 300;
+}
+
+.btn {
+	height: fit-content;
+	border-radius: 5px;
+	border-width: 0.1  !important;;
+	border-color: rgb(200, 200, 200)  !important;
+}
+
+.wd-btn-text {
+	font-size: medium;
+}
+
+.btn-primary {
+	background-color: rgb(230, 230, 230)  !important;
+	color: black  !important;
+}
+
+.btn-success {
+	background-color: rgb(170, 240, 170)  !important;
+}

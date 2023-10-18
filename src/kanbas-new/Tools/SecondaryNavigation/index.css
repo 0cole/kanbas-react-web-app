@@ -1,0 +1,16 @@
+.wd-navbar-secondary {
+	max-width: 190px;
+	overflow-y: scroll;
+}
+
+.wd-navbar-secondary > .list-group-item {
+	margin-left: 5px;
+	color: rgb(208, 15, 15);
+	margin-bottom: 10px;
+}
+
+.list-group-item.active {
+	color: black;
+	border-left: solid 2px black;
+    padding-left: 7px;
+}

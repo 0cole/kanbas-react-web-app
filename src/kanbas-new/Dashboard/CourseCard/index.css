@@ -1,0 +1,49 @@
+.wd-course-card {
+	width: 250px;
+	height: 300px;
+	margin: 15px;
+	display: flex;
+	align-items: start;
+	overflow: hidden;
+	border: none;
+}
+
+.wd-course-card-image {
+	width: 250px;
+	max-height: 150px;
+	object-fit: cover;
+}
+
+.wd-course-card-text {
+	width: 250px;
+	justify-content: space-between;
+}
+
+.wd-course-card-text .wd-course-name {
+	color: red;
+	font-size: large;
+	font-weight: 500;
+	margin-bottom: 5px;
+	text-decoration: none;
+}
+
+.wd-course-card-text .wd-course-section {
+	color: gray;
+	font-size: medium;
+	margin-bottom: 2px;
+	font-weight: 500;
+}
+
+.wd-course-card-text .wd-course-text {
+	color: gray;
+	font-size: medium;
+	font-weight: 500;
+	margin-bottom: 2px;
+	text-decoration: none;
+}
+
+.wd-course-card-icon {
+	text-decoration: none;
+	color: rgb(210, 210, 210);
+	float: right;
+}
