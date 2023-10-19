@@ -22,7 +22,6 @@ a {
 }
 
 .wd-header {
-	overflow-y: scroll;
     margin: 25px;
 	height: 65px;
     width: 100%;
