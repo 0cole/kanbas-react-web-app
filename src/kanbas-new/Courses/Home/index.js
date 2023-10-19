@@ -8,7 +8,7 @@ import RightSidebar from "./RightSidebar";
 function Home() {
 	return (
 		<div className="d-flex">
-			<div className="col-9">
+			<div className="col-9 wd-module-list-container">
 				<CourseHeader />
 				<ModuleList />
 			</div>

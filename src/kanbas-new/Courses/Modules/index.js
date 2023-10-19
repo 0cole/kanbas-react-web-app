@@ -5,8 +5,8 @@ import ModuleList from "../../Tools/Courses/ModuleList";
 
 function Modules() {
 	return (
-		<div className="d-flex m-2 col-sm-12 col-md-11 ">
-			<div className="">
+		<div className="d-flex m-2 col-sm-12 col-md-11">
+			<div className="wd-module-list-container">
 				<CourseHeader />
 				<ModuleList />
 			</div>
