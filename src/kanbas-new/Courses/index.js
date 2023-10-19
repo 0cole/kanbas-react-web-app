@@ -4,6 +4,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import CourseNavigation from "../Tools/SecondaryNavigation/CourseNavigation";
 import Home from "./Home";
 import Modules from "./Modules";
+import Grades from "./Grades";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import MobileCourseNav from "./MobileCourseNav";
@@ -25,7 +26,7 @@ function Courses() {
 				<div className="d-none d-md-block">
 					<CourseNavigation courseId={id} />
 				</div>
-				<div className="d-block d-md-none" style={{width: "10px"}}>
+				<div className="d-block d-md-none" style={{ width: "10px" }}>
 					<Link to={`/Kanbas/Courses/${courseId}/MobileCourseNav`}>
 						<IoEllipsisVertical style={{ fontSize: "24px", color: "rgb(208, 15, 15)" }} />
 					</Link>
@@ -44,7 +45,7 @@ function Courses() {
 						<Route path="Modules" element={<Modules />} />
 						<Route path="Assignments" element={<Assignments />} />
 						<Route path="Assignments/:assignmentId" element={<AssignmentEditor />} />
-						<Route path="Grades" element={<h1>Grades</h1>} />
+						<Route path="Grades" element={<Grades />} />
 						<Route path="MobileCourseNav" element={<MobileCourseNav courseId={id} />} />
 						<Route
 							path="/*"

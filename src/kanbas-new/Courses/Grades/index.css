@@ -1,26 +1,18 @@
-.wd-course-grades-search-box {
-    margin: 1pc;
+.wd-grade-header {
+	font-size: 40px;
+	font-weight: 300px;
+	border-bottom: 1px solid rgb(230, 230, 230);
+	margin-bottom: 3pc;
 }
 
-.wd-course-grades-table {
-    font-size: small;
-    font-weight: 300;
+.wd-grade-search-container {
+	display: flex;
+    align-items: center;
 }
 
-.wd-course-grades-individual-cell {
-    text-align: center;
-    border: 1px solid #ccc;
-}
-
-.wd-course-grades-individual-cell:focus {
-    outline: none;
-    border: 2px solid #007bff;
-}
-
-.wd-course-grades-individual-cell:after {
-    position: absolute;
-    top: 50%;
-    right: 5px;
-    transform: translateY(-50%);
-    pointer-events: none;
+.wd-grade-search {
+	margin-right: 5pc;
+	font-size: 20px;
+	font-weight: 400;
+	width: 300px;
 }
