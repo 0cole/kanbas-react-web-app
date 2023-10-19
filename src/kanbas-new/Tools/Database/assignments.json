@@ -7,5 +7,14 @@
 	{ "_id": "A203", "title": "Heating Analysis", "course": "102" },
 	{ "_id": "A301", "title": "Structural Design Task", "course": "103" },
 	{ "_id": "A302", "title": "Orbital Calculations", "course": "103" },
-	{ "_id": "A303", "title": "Systems Engineering Exam", "course": "103" }
+	{ "_id": "A303", "title": "Systems Engineering Exam", "course": "103" },
+	{ "_id": "A401", "title": "A1 ENV + HTML", "course": "104" },
+	{ "_id": "A402", "title": "A2 CSS", "course": "104" },
+	{ "_id": "A403", "title": "A3 REACT", "course": "104" },
+	{ "_id": "A501", "title": "Setting Up", "course": "105" },
+	{ "_id": "A502", "title": "Calculator in Assembly", "course": "105" },
+	{ "_id": "A503", "title": "Function Loops in Assembly", "course": "105" },
+	{ "_id": "A601", "title": "Week 1 Discussion Post", "course": "106" },
+	{ "_id": "A602", "title": "Week 2 Discussion Post", "course": "106" },
+	{ "_id": "A603", "title": "Week 3 Discussion Post", "course": "106" }
 ]
