@@ -26,7 +26,7 @@ function Courses() {
 				<div className="d-none d-md-block">
 					<CourseNavigation courseId={id} />
 				</div>
-				<div className="d-block d-md-none" style={{ width: "10px" }}>
+				<div className="d-block d-md-none" style={{ width: "30px" }}>
 					<Link to={`/Kanbas/Courses/${courseId}/MobileCourseNav`}>
 						<IoEllipsisVertical style={{ fontSize: "24px", color: "rgb(208, 15, 15)" }} />
 					</Link>
