@@ -7,6 +7,21 @@
     6. a
 
 
+### Q4.
+```javascript
+<_label_ _type_="email">Email</_label_>
+<input
+ _value_="alice@wonderland.com"
+ _placeholder_="john@doe.com"
+ _type_="email"
+ _title_="Type your email"/>
+```
+Fill in the blanks above so that
+the input field has an initial value of alice@wonderland.com
+when you click on Email, the input field get focus
+when you delete the text in the input field, it shows a grayed hint that says john@doe.com
+when you hover of the input field, a tooltip appears hovering on the input field that says Type your email
+
 ### TEXT FIELDS
 ```javascript 
 <label for="Name">Name</label>
