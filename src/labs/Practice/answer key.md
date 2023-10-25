@@ -174,7 +174,7 @@ export default Xyz;
 ### Q16.
     console prints 456 and then 234
 
-    ```javascript
+```javascript
 const qwe = { _asd_: 123, _sdf_: 234 }
 const zxc = { _sdf_: 345, ...qwe,
             _asd_: 456, zxc: 567 }
