@@ -295,3 +295,46 @@ const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const filteredArray = array.filter((x) => x % 2 === 0);
 // filteredArray: [2, 4, 6, 8, 10]
 ```
+
+### USE STATE
+
+##### Counter
+```javascript
+import React, { useState } from "react";
+function Counter() {
+  const [count, setCount] = useState(7);
+  console.log(count);
+  return (
+    <div>
+      <h2>Counter: {count}</h2>
+      <button onClick={() => setCount(count + 1)}>Up</button>
+      <button onClick={() => setCount(count - 1)}>Down</button>
+    </div>
+  );
+}
+export default Counter;
+```
+
+##### Object
+```javascript
+import React, { useState } from "react";
+function ObjectStateVariable() {
+  const [person, setPerson] = useState({ name: "Peter", age: 24 });
+  return (
+    <div>
+      <h2>Object State Variables</h2>
+      <pre>{JSON.stringify(person, null, 2)}</pre>
+      <input
+        value={person.name}
+        onChange={(e) => setPerson({ ...person, name: e.target.value })}
+      />
+      <input
+        value={person.age}
+        onChange={(e) => setPerson({ ...person,
+                                     age: parseInt(e.target.value) })}
+      />
+    </div>
+  );
+}
+export default ObjectStateVariable;
+```
