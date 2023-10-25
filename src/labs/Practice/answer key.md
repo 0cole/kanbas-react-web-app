@@ -37,9 +37,7 @@ const z = [234, ...y]
             );
         }
         export default Jkl;
-    ```
     
-    ```javascript
     Bnm.js
             import { Link, Route, Routes } from "react-router-dom";
             import Jkl from "./Jkl";
