@@ -257,7 +257,8 @@ const w = _b_._filter_(q => _q_ > _1_);
 
 ### MAP
 
-Syntax: array.map(function(currentValue, index, array), thisValue);
+Syntax: `array.map(function(currentValue, index, array), thisValue)`
+
 Description: Creates a new array by applying a function to each element of the original array.
 ```javascript 
 const array = [1, 2, 3, 4, 5];
@@ -268,7 +269,8 @@ const mappedArray = array.map((x) => x * 2);
 
 ### FIND
 
-Syntax: array.find(function(currentValue, index, array), thisValue)
+Syntax: `array.find(function(currentValue, index, array), thisValue)`
+
 Description: Returns the value of the first element in the array that satisfies the provided testing function.
 ```javascript 
 const array = [5, 12, 8, 130, 44];
@@ -278,7 +280,8 @@ const found = array.find((element) => element > 10);
 
 ### FIND INDEX
 
-Syntax: array.findIndex(function(currentValue, index, array), thisValue)
+Syntax: `array.findIndex(function(currentValue, index, array), thisValue)`
+
 Description: Returns the index of the first element in the array that satisfies the provided testing function.
 ```javascript
 const array = [5, 12, 8, 130, 44];
@@ -288,7 +291,8 @@ const foundIndex = array.findIndex((element) => element > 10);
 
 ### FILTER
 
-Syntax: array.filter(function(currentValue, index, array), thisValue)
+Syntax: `array.filter(function(currentValue, index, array), thisValue)`
+
 Description: Creates a new array with all elements that pass the test implemented by the provided function.
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
