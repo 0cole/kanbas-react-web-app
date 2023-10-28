@@ -1,4 +1,3 @@
-import db from "../Tools/Database";
 import { useParams, useLocation, Link } from "react-router-dom";
 import { Routes, Route, Navigate } from "react-router-dom";
 import CourseNavigation from "../Tools/SecondaryNavigation/CourseNavigation";
@@ -12,10 +11,10 @@ import Breadcrumbs from "../Tools/Courses/Breadcrumbs";
 import { IoEllipsisVertical } from "react-icons/io5";
 import "./index.css";
 
-function Courses() {
+function Courses( props ) {
 	const { courseId } = useParams();
-	const course = db.courses.find((course) => course._id === courseId);
-	const id = course._id;
+	const courses = props.courses;
+	const course = courses.find((course) => course._id === courseId);
 	const page = useLocation().pathname.split("/").pop();
 	return (
 		<div className="wd-main-content">
@@ -24,7 +23,7 @@ function Courses() {
 			</div>
 			<div className="d-flex">
 				<div className="d-none d-md-block">
-					<CourseNavigation courseId={id} />
+					<CourseNavigation courseId={course._id} />
 				</div>
 				<div className="d-block d-md-none" style={{ width: "30px", zIndex: "1" }}>
 					<Link to={`/Kanbas/Courses/${courseId}/MobileCourseNav`}>
@@ -46,7 +45,7 @@ function Courses() {
 						<Route path="Assignments" element={<Assignments />} />
 						<Route path="Assignments/:assignmentId" element={<AssignmentEditor />} />
 						<Route path="Grades" element={<Grades />} />
-						<Route path="MobileCourseNav" element={<MobileCourseNav courseId={id} />} />
+						<Route path="MobileCourseNav" element={<MobileCourseNav courseId={course._id} />} />
 						<Route
 							path="/*"
 							element={

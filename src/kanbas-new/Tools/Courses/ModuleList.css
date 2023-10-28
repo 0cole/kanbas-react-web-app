@@ -4,3 +4,41 @@
 	padding-left: 1pc;
     justify-content: space-between;
 }
+
+.wd-module-button {
+    padding: 5px !important;
+	border-width: 0 !important;
+    background-color: white;
+}
+
+.wd-module-icon {
+    text-decoration: none;
+	color: rgb(210, 210, 210);;
+}
+
+.wd-module-edit {
+    display: flex;
+}
+
+.wd-module-edit-text {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1pc;
+}
+
+.wd-module-edit-text .wd-module-name {
+    width: 400px;
+    margin-bottom: 5px;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(210, 210, 210);;
+}
+
+.wd-module-edit-text .wd-module-description {
+    width: 400px;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(210, 210, 210);;
+}
+
+.wd-module-save-button {
+
+}

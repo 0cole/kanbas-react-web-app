@@ -1,34 +1,8 @@
-import { React, useState } from "react";
-import db from "../Tools/Database";
+import { React } from "react";
 import CourseCard from "./CourseCard";
 import "./index.css";
 
-function Dashboard() {
-	const [courses, setCourses] = useState(db.courses);
-	const [course, setCourse] = useState({
-		name: "New Course",
-		number: "New Number",
-		startDate: "2023-09-10",
-		endDate: "2023-12-15",
-	});
-	const addNewCourse = () => {
-		setCourses([...courses, { ...course, _id: new Date().getTime() }]);
-	};
-	const deleteCourse = (courseId) => {
-		setCourses(courses.filter((course) => course._id !== courseId));
-	};
-	const updateCourse = () => {
-		setCourses(
-			courses.map((c) => {
-				if (c._id === course._id) {
-					return course;
-				} else {
-					return c;
-				}
-			})
-		);
-	};
-
+function Dashboard({ courses, course, setCourse, addNewCourse, deleteCourse, updateCourse }) {
 	return (
 		<div className="wd-main-content">
 			<div className="row wd-header d-none d-md-block">
