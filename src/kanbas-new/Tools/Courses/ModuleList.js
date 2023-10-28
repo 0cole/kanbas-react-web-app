@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "./ModuleList.css";
 import { useParams } from "react-router-dom";
+import { AiOutlinePlus } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
 import { BsGripVertical } from "react-icons/bs";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { IoEllipsisVertical } from "react-icons/io5";
 import { BiMessageSquareEdit } from "react-icons/bi";
 import { useSelector, useDispatch } from "react-redux";
-import { addModule, deleteModule, updateModule, setModule } from "../../Courses/Modules/modulesReducer";
+import { addModule, deleteModule, updateModule } from "../../Courses/Modules/modulesReducer";
 
 function ModuleList() {
 	const { courseId } = useParams();
@@ -41,9 +42,9 @@ function ModuleList() {
 
 	return (
 		<div>
-			<li className="list-group-item">
-				<button onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
-			</li>
+			<button className="btn btn-primary" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+				<AiOutlinePlus />
+			</button>
 
 			<ul className="list-group">
 				{modules
