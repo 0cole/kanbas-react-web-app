@@ -21,3 +21,23 @@
     width: fit-content;
 }
 
+.wd-assignment {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.wd-assignment-delete {
+	display: flex;
+}
+
+.wd-assignment-button {
+	padding: 5px !important;
+	border-width: 0 !important;
+}
+
+.wd-assignment-icon {
+	text-decoration: none;
+	color: rgb(210, 210, 210);
+}
