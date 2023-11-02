@@ -5,7 +5,7 @@ import db from "../../Tools/Database";
 const initialState = {
   modules: db.modules,
   module: { name: "New Module 123", description: "New Description" },
-};
+}; 
 
 
 const modulesSlice = createSlice({
