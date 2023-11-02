@@ -29,6 +29,16 @@
 	text-decoration: none;
 }
 
+.wd-course-card-text .wd-course-edit-contents {
+	background-color: rgb(250, 250, 250);
+	width: fit-content;
+	max-width: 175px;
+	height: fit-content;
+	border: 1px solid rgb(210, 210, 210);
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
 .wd-course-card-text .wd-course-section {
 	color: gray;
 	font-size: medium;
@@ -36,7 +46,7 @@
 	font-weight: 500;
 }
 
-.wd-course-card-text .wd-course-text {
+.wd-course-card-text .wd-course-number {
 	color: gray;
 	font-size: medium;
 	font-weight: 500;
