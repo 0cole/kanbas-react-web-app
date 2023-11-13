@@ -11,11 +11,14 @@ import Breadcrumbs from "../Tools/Courses/Breadcrumbs";
 import { IoEllipsisVertical } from "react-icons/io5";
 import "./index.css";
 
-function Courses( props ) {
+function Courses(props) {
 	const { courseId } = useParams();
 	const courses = props.courses;
 	const course = courses.find((course) => course._id === courseId);
 	const page = useLocation().pathname.split("/").pop();
+	if (!course) {
+		return <div>Course not found</div>;
+	}
 	return (
 		<div className="wd-main-content">
 			<div className="d-none d-md-block">

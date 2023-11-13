@@ -3,7 +3,7 @@ import CourseCard from "./CourseCard";
 import "./index.css";
 import { BsPlusLg } from "react-icons/bs";
 
-function Dashboard({ courses, course, setCourse, addNewCourse, deleteCourse, updateCourse }) {
+function Dashboard({ courses, setCourse, addNewCourse, deleteCourse, updateCourse }) {
 	return (
 		<div className="wd-main-content">
 			<div className="row wd-header d-none d-md-block">

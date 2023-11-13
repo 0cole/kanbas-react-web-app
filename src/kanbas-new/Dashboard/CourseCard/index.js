@@ -57,7 +57,7 @@ function CourseCard(props) {
 						className="btn btn-outline-danger wd-course-card-button"
 						onClick={(event) => {
 							event.preventDefault();
-							deleteCourse(course._id);
+							deleteCourse(course);
 						}}
 					>
 						<RxCross1 className="wd-course-card-icon" />
@@ -67,7 +67,7 @@ function CourseCard(props) {
 						onClick={(event) => {
 							event.preventDefault();
 							if (isEditing) {
-								updateCourse();
+								updateCourse(course);
 							}
 							setIsEditing(!isEditing);
 						}}
