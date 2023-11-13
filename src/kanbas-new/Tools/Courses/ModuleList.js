@@ -1,17 +1,23 @@
-import React, { useState } from "react"; 
 import "./ModuleList.css";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { setModules, addModule, deleteModule, updateModule, setModule } from "../../Courses/Modules/modulesReducer";
+import * as client from "../../Courses/Modules/client";
 import { AiOutlinePlus } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
 import { BsGripVertical } from "react-icons/bs";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { IoEllipsisVertical } from "react-icons/io5";
 import { BiMessageSquareEdit } from "react-icons/bi";
-import { useSelector, useDispatch } from "react-redux";
-import { addModule, deleteModule, updateModule } from "../../Courses/Modules/modulesReducer";
 
 function ModuleList() {
 	const { courseId } = useParams();
+
+	useEffect(() => {
+		client.findModulesForCourse(courseId).then((modules) => dispatch(setModules(modules)));
+	}, [courseId]);
+
 	const modules = useSelector((state) => state.modulesReducer.modules);
 	const module = useSelector((state) => state.modulesReducer.module);
 	const dispatch = useDispatch();
@@ -20,29 +26,39 @@ function ModuleList() {
 	const [editedName, setEditedName] = useState("");
 	const [editedDescription, setEditedDescription] = useState("");
 
+	const handleAddModule = () => {
+		client.createModule(courseId, module).then((module) => {
+			dispatch(addModule(module));
+		});
+	};
+	const handleDeleteModule = (moduleId) => {
+		client.deleteModule(moduleId).then((status) => {
+			dispatch(deleteModule(moduleId));
+		});
+	};
+	const handleUpdateModule = async () => {
+		const editedModule = modules.find((m) => m._id === editModuleId);
+		if (editedModule) {
+			const updatedModule = {
+				...editedModule,
+				name: editedName,
+				description: editedDescription,
+			};
+			await client.updateModule(updatedModule);
+			dispatch(updateModule(updatedModule));
+			setEditModuleId(null);
+		}
+	};
+
 	const handleEdit = (moduleId, name, description) => {
 		setEditModuleId(moduleId);
 		setEditedName(name);
 		setEditedDescription(description);
 	};
 
-	const handleSave = () => {
-		const editedModule = modules.find((m) => m._id === editModuleId);
-		if (editedModule) {
-			dispatch(
-				updateModule({
-					...editedModule,
-					name: editedName,
-					description: editedDescription,
-				})
-			);
-			setEditModuleId(null);
-		}
-	};
-
 	return (
 		<div>
-			<button className="btn btn-primary" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+			<button className="btn btn-primary" onClick={handleAddModule}>
 				<AiOutlinePlus />
 			</button>
 
@@ -68,7 +84,7 @@ function ModuleList() {
 											/>
 										</div>
 
-										<button className="btn btn-primary" onClick={handleSave}>
+										<button className="btn btn-primary" onClick={handleUpdateModule}>
 											Save
 										</button>
 									</div>
@@ -81,7 +97,7 @@ function ModuleList() {
 							</div>
 							<button
 								className="wd-module-button"
-								onClick={() => dispatch(deleteModule(module._id))}
+								onClick={() => handleDeleteModule(module._id)}
 								style={{ position: "absolute", right: "0", top: "0" }}
 							>
 								<RxCross1 className="wd-module-icon" />
