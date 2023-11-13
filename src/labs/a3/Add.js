@@ -8,6 +8,7 @@ function Add() {
 			{" "}
 			<h2>Add Path Parameters</h2>
 			{a} + {b} = {parseInt(a) + parseInt(b)}
+			console.log (a + b);
 		</div>
 	);
 }
