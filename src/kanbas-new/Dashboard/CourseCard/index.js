@@ -4,14 +4,27 @@ import { BiSave } from "react-icons/bi";
 import "./index.css";
 import { Link } from "react-router-dom";
 import { RxCross1 } from "react-icons/rx";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import findAllCourses from "../../index";
+import { useDispatch } from "react-redux";
 
 function CourseCard(props) {
 	const { course, deleteCourse, setCourse, updateCourse } = props;
 
+	const courseId = course._id;
+
 	const [isEditing, setIsEditing] = useState(false);
 	const [editedName, setEditedName] = useState(course.name);
 	const [editedNumber, setEditedNumber] = useState(course.number);
+	const updatedCourse = {
+		...course,
+		name: editedName !== "" ? editedName : course.name,
+		number: editedNumber !== "" ? editedNumber : course.number,
+	};
+
+	const handleSave = (course) => {
+		updateCourse(updatedCourse);
+	};
 
 	return (
 		<Link to={`/Kanbas/Courses/${course._id}`} className="card wd-course-card">
@@ -29,7 +42,7 @@ function CourseCard(props) {
 								}}
 								onChange={(event) => {
 									setEditedName(event.target.value);
-									setCourse({ ...course, name: event.target.value });
+									// setCourse({ ...course, name: event.target.value });
 								}}
 							/>
 							<input
@@ -41,14 +54,14 @@ function CourseCard(props) {
 								}}
 								onChange={(event) => {
 									setEditedNumber(event.target.value);
-									setCourse({ ...course, number: event.target.value });
+									// setCourse({ ...course, number: event.target.value });
 								}}
 							/>
 						</>
 					) : (
 						<>
-							<p className="wd-course-name">{course.name}</p>
-							<p className="wd-course-number">{course.number}</p>
+							<p className="wd-course-name">{updatedCourse.name}</p>
+							<p className="wd-course-number">{updatedCourse.number}</p>
 						</>
 					)}
 				</div>
@@ -67,7 +80,7 @@ function CourseCard(props) {
 						onClick={(event) => {
 							event.preventDefault();
 							if (isEditing) {
-								updateCourse(course);
+								handleSave(course);
 							}
 							setIsEditing(!isEditing);
 						}}
