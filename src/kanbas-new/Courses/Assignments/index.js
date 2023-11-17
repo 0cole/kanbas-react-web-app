@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { BsGripVertical } from "react-icons/bs";
 import { FiEdit2 } from "react-icons/fi";
@@ -8,15 +8,26 @@ import { RxCross1 } from "react-icons/rx";
 import "./index.css";
 import "../index.css";
 import { useSelector, useDispatch } from "react-redux";
-import { addAssignment, deleteAssignment } from "./assignmentReducer";
+import { addAssignment, deleteAssignment, setAssignments } from "./assignmentReducer";
+import * as client from "./client";
 
 function Assignments() {
 	const { courseId } = useParams();
+
+	useEffect(() => {
+		client.findAssignmentsForCourse(courseId).then((assignments) => dispatch(setAssignments(assignments)));
+	}, [courseId]);
+
 	const assignments = useSelector((state) => state.assignmentReducer.assignments);
+	const assignment = useSelector((state) => state.assignmentReducer.assignment);
 	const courseAssignments = assignments.filter((assignment) => assignment.course === courseId);
 	const dispatch = useDispatch();
 
-	
+	const handleDeleteAssignment = (assignmentId) => {
+		client.deleteAssignment(assignmentId).then((status) => {
+			dispatch(deleteAssignment(assignmentId));
+		});
+	};
 
 	return (
 		<div>
@@ -40,7 +51,7 @@ function Assignments() {
 									className="btn btn-outline-danger wd-assignment-button"
 									onClick={(event) => {
 										event.preventDefault();
-										dispatch(deleteAssignment(assignment._id));
+										handleDeleteAssignment(assignment._id);
 									}}
 								>
 									<RxCross1 className="wd-assignment-icon" />
@@ -58,6 +69,12 @@ function AssignmentPageHeader() {
 	const { courseId } = useParams();
 	const assignment = useSelector((state) => state.assignmentReducer.assignment);
 	const dispatch = useDispatch();
+
+	const handleAddAssignment = () => {
+		client.createAssignment(courseId, assignment).then((assignment) => {
+			dispatch(addAssignment(assignment));
+		});
+	};
 	return (
 		<div id="wd-course-header" className="d-flex justify-space-between">
 			<div className="wd-course-assignment-search">
@@ -78,7 +95,7 @@ function AssignmentPageHeader() {
 				<button
 					className="btn btn-danger wd-course-header-btn"
 					onClick={() => {
-						dispatch(addAssignment({ ...assignment, course: courseId }));
+						handleAddAssignment();
 					}}
 				>
 					<span className="wd-btn-text">

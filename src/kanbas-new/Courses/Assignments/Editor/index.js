@@ -7,6 +7,7 @@ import "../index.css";
 import "../../index.css";
 import { useDispatch, useSelector } from "react-redux";
 import { updateAssignment } from "../assignmentReducer";
+import * as client from "../client";
 
 function AssignmentEditor() {
 	const { assignmentId, courseId } = useParams();
@@ -20,21 +21,21 @@ function AssignmentEditor() {
 	const [editedDueDate, setEditedDueDate] = useState("");
 	const [editedAvailableFrom, setEditedAvailableFrom] = useState("");
 
-	const handleSave = () => {
-		const newTitle = editedTitle !== "" ? editedTitle : assignment.title;
-		const newDescription = editedDescription !== "" ? editedDescription : assignment.description;
-		const newDueDate = editedDueDate !== "" ? editedDueDate : assignment.dueDate;
-		const newAvailableFrom = editedAvailableFrom !== "" ? editedAvailableFrom : assignment.availableFrom;
-		dispatch(
-			updateAssignment({
+	const handleUpdateAssignment = async () => {
+		const editedAssignment = assignments.find((m) => m._id === assignmentId);
+		if (editedAssignment) {
+			const updatedAssignment = {
 				...assignment,
-				title: newTitle,
-				description: newDescription,
-				dueDate: newDueDate,
-				availableFrom: newAvailableFrom,
-			})
-		);
-		navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+				title: editedTitle !== "" ? editedTitle : assignment.title,
+				description: editedDescription !== "" ? editedDescription : assignment.description,
+				dueDate: editedDueDate !== "" ? editedDueDate : assignment.dueDate,
+				availableFrom: editedAvailableFrom !== "" ? editedAvailableFrom : assignment.availableFrom,
+			};
+			await client.updateAssignment(updatedAssignment);
+			dispatch(updateAssignment(updatedAssignment));
+			navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+			// setEditModuleId(null);
+		}
 	};
 
 	return (
@@ -172,7 +173,7 @@ function AssignmentEditor() {
 				<Link to={`/Kanbas/Courses/${courseId}/Assignments`} className="btn btn-danger">
 					Cancel
 				</Link>
-				<button onClick={handleSave} className="btn btn-success" style={{ marginLeft: "5px" }}>
+				<button onClick={handleUpdateAssignment} className="btn btn-success" style={{ marginLeft: "5px" }}>
 					Save
 				</button>
 			</div>
