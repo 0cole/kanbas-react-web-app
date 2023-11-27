@@ -1,7 +1,7 @@
 import axios from "axios";
-const API_BASE = "https://kanbas-node-server-app-6da5.onrender.com/api";
-const COURSES_URL = `${API_BASE}/courses`;
-const MODULES_URL = `${API_BASE}/modules`;
+export const API_BASE = process.env.REACT_APP_BASE_API_URL;
+export const COURSES_URL = `${API_BASE}/courses`;
+export const MODULES_URL = `${API_BASE}/modules`;
 
 
 export const findModulesForCourse = async (courseId) => {

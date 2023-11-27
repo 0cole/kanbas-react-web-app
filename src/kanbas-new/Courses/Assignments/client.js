@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE = "https://kanbas-node-server-app-6da5.onrender.com/api";
+const API_BASE = process.env.REACT_APP_BASE_API_URL;
 const COURSES_URL = `${API_BASE}/courses`;
 const ASSIGNMENTS_URL = `${API_BASE}/assignments`;
 
