@@ -19,7 +19,7 @@ function Kanbas() {
 
 	const [courses, setCourses] = useState([]);
 
-	const API_BASE = "https://kanbas-node-server-app-6da5.onrender.com/api";
+	const API_BASE = process.env.REACT_APP_BASE_API_URL;
 	const URL = `${API_BASE}/courses`;
 
 	const findAllCourses = async () => {
