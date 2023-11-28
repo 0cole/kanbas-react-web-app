@@ -1,5 +1,5 @@
 import axios from "axios";
-export const API_BASE = process.env.REACT_APP_BASE_API_URL;
+export const API_BASE = process.env.REACT_APP_API_BASE_URL;
 export const COURSES_URL = `${API_BASE}/courses`;
 export const MODULES_URL = `${API_BASE}/modules`;
 
